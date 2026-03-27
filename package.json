@@ -1,0 +1,12 @@
+﻿{
+  "name": "felicia-profile",
+  "version": "1.0.0",
+  "description": "Profile page Felicia Angeline with Express",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {}
+}

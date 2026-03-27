@@ -1,0 +1,521 @@
+﻿<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Felicia Angeline | Profile</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Urbanist:wght@300;400;600;700&display=swap');
+
+:root {
+  --bg: #f5f1ea;
+  --accent: #c45a3f;
+  --accent-dark: #8a3d2d;
+  --text: #2a2a2a;
+  --muted: #5b5b5b;
+  --panel: #ffffff;
+  --shadow: 0 20px 40px rgba(36, 24, 12, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
+  background: radial-gradient(circle at top, #fff8ef 0%, #f2e7da 40%, #efe2d5 100%);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.bg-orb {
+  position: fixed;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.bg-orb-1 {
+  background: radial-gradient(circle, rgba(196, 90, 63, 0.35), transparent 70%);
+  top: -120px;
+  left: -80px;
+}
+
+.bg-orb-2 {
+  background: radial-gradient(circle, rgba(68, 125, 109, 0.25), transparent 70%);
+  bottom: -140px;
+  right: -120px;
+}
+
+.site-header {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 24px auto 0;
+  padding: 14px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow);
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, #c45a3f, #efb59f);
+  font-family: 'Playfair Display', serif;
+}
+
+.nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-link {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+.nav-cta {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent-dark);
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  align-items: center;
+}
+
+.hero-simple {
+  align-items: stretch;
+}
+
+.tag {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+  color: var(--accent-dark);
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 56px);
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.cta-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 14px 26px rgba(196, 90, 63, 0.32);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(196, 90, 63, 0.38);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: var(--text);
+}
+
+.btn-ghost:hover {
+  transform: translateY(-2px);
+}
+
+.hero-card {
+  background: var(--panel);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 20px;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #c45a3f, #efb59f);
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 700;
+  font-size: 28px;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-card h2 {
+  font-size: 24px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 12px;
+}
+
+.stat {
+  background: #f8f2ea;
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.stat-label {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.stat-value {
+  font-size: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.panel {
+  background: var(--panel);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.panel h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.panel p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.list {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chips li {
+  background: #f5ebe2;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
+.timeline {
+  background: var(--panel);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.timeline h3 {
+  margin-bottom: 20px;
+}
+
+.timeline-items {
+  display: grid;
+  gap: 16px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.timeline-year {
+  font-weight: 700;
+  color: var(--accent-dark);
+}
+
+.timeline-item h4 {
+  margin-bottom: 6px;
+}
+
+.timeline-item p {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.contact {
+  background: #2b2a27;
+  color: white;
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.contact h3 {
+  margin-bottom: 12px;
+}
+
+.contact p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.contact-label {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-page {
+  display: grid;
+  gap: 24px;
+}
+
+.site-footer {
+  max-width: 1100px;
+  margin: 0 auto 32px;
+  padding: 0 24px 24px;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    flex-direction: column;
+    border-radius: 24px;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 32px 18px 64px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+
+    <header class="site-header">
+      <div class="logo">FA</div>
+      <nav class="nav">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/about" class="nav-link">About</a>
+      </nav>
+      <div class="nav-cta">Profile Page</div>
+    </header>
+
+    <main class="page">
+      <section class="hero">
+        <div class="hero-text">
+          <p class="tag">Profile Mahasiswi</p>
+          <h1>Felicia Angeline</h1>
+          <p class="subtitle">
+            Mahasiswi Universitas Tarumanagara yang fokus pada pengembangan diri, kreativitas,
+            dan kolaborasi.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/about">Lihat Portofolio</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="avatar">
+            <span>FA</span>
+          </div>
+          <div class="hero-card-body">
+            <h2>Felicia Angeline</h2>
+            <p>Universitas Tarumanagara</p>
+            <div class="stats">
+              <div class="stat">
+                <span class="stat-label">Semester</span>
+                <strong class="stat-value">4</strong>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Jurusan</span>
+                <strong class="stat-value">IT</strong>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Target Lulus</span>
+                <strong class="stat-value">2029</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <h3>Tentang Felicia</h3>
+          <p>
+            Felicia dikenal ramah, tekun, dan senang mengeksplorasi hal baru. Saat ini ia
+            aktif membangun pengalaman akademik melalui organisasi kampus dan proyek kreatif.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Pendidikan</h3>
+          <ul class="list">
+            <li>S1 Universitas Tarumanagara</li>
+            <li>Fokus: Teknologi Informasi (IT)</li>
+            <li>Target lulus: 2029</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <h3>Aktivitas Favorit</h3>
+          <ul class="chips">
+            <li>Desain Poster</li>
+            <li>Fotografi</li>
+            <li>Public Speaking</li>
+            <li>Event Kampus</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="timeline">
+        <h3>Highlights</h3>
+        <div class="timeline-items">
+          <div class="timeline-item">
+            <span class="timeline-year">2025</span>
+            <div>
+              <h4>Project Visual Branding</h4>
+              <p>Mengembangkan konsep visual untuk event kampus tahunan.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">2024</span>
+            <div>
+              <h4>Volunteer Media</h4>
+              <p>Mengelola konten digital untuk komunitas mahasiswa.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">2023</span>
+            <div>
+              <h4>Awal Studi</h4>
+              <p>Memulai perjalanan akademik di Universitas Tarumanagara.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <h3>Kontak</h3>
+        <p>Ingin berkolaborasi? Mari terhubung dan buat sesuatu yang berkesan.</p>
+        <div class="contact-grid">
+          <div>
+            <span class="contact-label">Email</span>
+            <p>felicia.angeline@email.com</p>
+          </div>
+          <div>
+            <span class="contact-label">Instagram</span>
+            <p>@felicia.angeline</p>
+          </div>
+          <div>
+            <span class="contact-label">LinkedIn</span>
+            <p>felicia-angeline</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Felicia Angeline · Universitas Tarumanagara · 2026</p>
+    </footer>
+  </body>
+</html>
