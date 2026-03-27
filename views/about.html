@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Felicia Angeline</title>
+    <title>About | Home</title>
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Urbanist:wght@300;400;600;700&display=swap');
 
@@ -191,55 +191,6 @@ body {
   transform: translateY(-2px);
 }
 
-.hero-card {
-  background: var(--panel);
-  border-radius: 28px;
-  padding: 28px;
-  box-shadow: var(--shadow);
-  display: grid;
-  gap: 20px;
-}
-
-.avatar {
-  width: 96px;
-  height: 96px;
-  border-radius: 28px;
-  background: linear-gradient(135deg, #c45a3f, #efb59f);
-  display: grid;
-  place-items: center;
-  color: white;
-  font-weight: 700;
-  font-size: 28px;
-  font-family: 'Playfair Display', serif;
-}
-
-.hero-card h2 {
-  font-size: 24px;
-}
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-  gap: 12px;
-}
-
-.stat {
-  background: #f8f2ea;
-  border-radius: 16px;
-  padding: 12px;
-}
-
-.stat-label {
-  display: block;
-  font-size: 12px;
-  color: var(--muted);
-  margin-bottom: 6px;
-}
-
-.stat-value {
-  font-size: 18px;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -251,6 +202,12 @@ body {
   border-radius: 24px;
   padding: 24px;
   box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px rgba(36, 24, 12, 0.16);
 }
 
 .panel h3 {
@@ -261,6 +218,19 @@ body {
 .panel p {
   color: var(--muted);
   line-height: 1.6;
+}
+
+.panel-content {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.panel-content p {
+  margin-bottom: 16px;
+}
+
+.panel-content p:last-child {
+  margin-bottom: 0;
 }
 
 .list {
@@ -282,80 +252,6 @@ body {
   border-radius: 999px;
   padding: 8px 14px;
   font-size: 14px;
-}
-
-.timeline {
-  background: var(--panel);
-  border-radius: 28px;
-  padding: 28px;
-  box-shadow: var(--shadow);
-}
-
-.timeline h3 {
-  margin-bottom: 20px;
-}
-
-.timeline-items {
-  display: grid;
-  gap: 16px;
-}
-
-.timeline-item {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 16px;
-  align-items: start;
-}
-
-.timeline-year {
-  font-weight: 700;
-  color: var(--accent-dark);
-}
-
-.timeline-item h4 {
-  margin-bottom: 6px;
-}
-
-.timeline-item p {
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-.contact {
-  background: #2b2a27;
-  color: white;
-  border-radius: 28px;
-  padding: 28px;
-  box-shadow: var(--shadow);
-}
-
-.contact h3 {
-  margin-bottom: 12px;
-}
-
-.contact p {
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 20px;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 16px;
-}
-
-.contact-label {
-  display: block;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-bottom: 6px;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.contact-page {
-  display: grid;
-  gap: 24px;
 }
 
 .site-footer {
@@ -381,12 +277,7 @@ body {
   .page {
     padding: 32px 18px 64px;
   }
-
-  .timeline-item {
-    grid-template-columns: 1fr;
-  }
 }
-
     </style>
   </head>
   <body>
@@ -398,59 +289,66 @@ body {
       <nav class="nav">
         <a href="/" class="nav-link">Home</a>
         <a href="/about" class="nav-link">About</a>
+        <a href="/profile" class="nav-link">Profile</a>
       </nav>
-      <div class="nav-cta">Profile Page</div>
     </header>
 
     <main class="page">
-      <section class="hero hero-simple">
-        <div class="hero-text">
-          <p class="tag">About</p>
-          <h1>Cerita & Portofolio</h1>
-          <p class="subtitle">
-            Felicia suka menggabungkan estetika visual dengan pesan yang kuat. Ia terbiasa
-            bekerja dalam tim untuk menghasilkan karya kreatif yang berdampak.
-          </p>
-        </div>
-        <div class="hero-card">
-          <h2>Fokus Utama</h2>
-          <ul class="list">
-            <li>Visual identity untuk event kampus</li>
-            <li>Presentasi dan storytelling</li>
-            <li>Branding media sosial</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="grid">
-        <article class="panel">
-          <h3>Project Terbaru</h3>
-          <p>
-            Membuat sistem desain untuk rangkaian acara kampus, termasuk poster, feed
-            Instagram, dan booth display.
-          </p>
-        </article>
-        <article class="panel">
-          <h3>Skill Utama</h3>
-          <ul class="chips">
-            <li>Adobe Illustrator</li>
-            <li>Figma</li>
-            <li>Copywriting</li>
-            <li>Photography</li>
-          </ul>
-        </article>
-        <article class="panel">
-          <h3>Tujuan 2026</h3>
-          <p>
-            Mengembangkan portofolio profesional dan memperluas jejaring kolaborasi di dunia
-            kreatif.
-          </p>
-        </article>
-      </section>
+      <h1>About Us</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare molestie
+        magna, id gravida leo vulputate eu. Sed semper lacus quam, non dignissim sem
+        efficitur nec. Etiam ultricies bibendum quam id euismod. Vivamus a accumsan
+        risus, viverra gravida velit. Sed ut maximus massa. Fusce elementum auctor
+        erat, sed condimentum turpis. In dictum sem diam, sit amet molestie quam
+        ultrices et. Quisque luctus, erat vitae tempor tristique, leo nunc egestas
+        sapien, ut gravida erat est sed augue. Orci varius natoque penatibus et magnis
+        dis parturient montes, nascetur ridiculus mus. Etiam tristique leo in pharetra
+        volutpat.
+      </p>
+      <p>
+        Aliquam sagittis lorem id leo mattis, in pharetra ante lobortis. Praesent orci
+        turpis, finibus in ultricies vitae, congue at lorem. Sed malesuada quam nulla,
+        sit amet sollicitudin velit tristique id. Nulla faucibus non magna sed
+        blandit. Praesent a quam vitae leo commodo blandit. Etiam elementum leo nec
+        leo lobortis porta. Donec quis ligula nec nulla aliquam dictum. Phasellus
+        vitae sem libero. Pellentesque semper nisi in metus sagittis rutrum. Sed
+        convallis neque sem, eget interdum purus vestibulum a.
+      </p>
+      <p>
+        Nam vel consequat arcu. Fusce sed semper ex, non hendrerit elit. Vivamus sit
+        amet ligula eget est luctus convallis quis eu tellus. Ut pharetra ex sed nisl
+        dapibus, at hendrerit elit imperdiet. Donec sed congue lacus. Fusce eget
+        dapibus est, non ultrices sem. Integer congue rutrum nulla, eget scelerisque
+        est tempus sit amet.
+      </p>
+      <p>
+        Donec convallis lorem vitae erat imperdiet, at iaculis justo aliquet.
+        Phasellus non neque vehicula, rhoncus lorem et, vestibulum ipsum. Phasellus
+        vitae purus pulvinar, mollis sapien vel, tempor ex. Cras sit amet accumsan
+        nisl, quis varius libero. Aliquam congue metus vitae dolor pharetra feugiat.
+        Curabitur ac sollicitudin sapien. Aenean lacinia convallis dui, sollicitudin
+        pharetra tellus imperdiet faucibus. Sed facilisis nunc quis urna viverra
+        tristique. Praesent commodo leo condimentum, maximus felis mollis, scelerisque
+        ex. Cras quis luctus mauris, vel pellentesque eros. Fusce porta ante nec
+        tellus tempus imperdiet. Sed eu est fermentum mi iaculis volutpat. Curabitur
+        blandit elit augue, sit amet vestibulum justo fermentum eget.
+      </p>
+      <p>
+        Vestibulum purus diam, volutpat in metus non, commodo convallis metus.
+        Praesent eu sagittis eros, vel tincidunt quam. Nunc dignissim sit amet felis
+        hendrerit ornare. Vestibulum molestie, metus nec tristique condimentum, ante
+        quam fringilla augue, a vestibulum neque ipsum sit amet metus. Lorem ipsum
+        dolor sit amet, consectetur adipiscing elit. Morbi libero ligula, malesuada ac
+        commodo sit amet, bibendum sit amet risus. Vestibulum mauris mauris, porttitor
+        eget dolor sit amet, fringilla mollis enim. Suspendisse mi sem, suscipit non
+        nibh a, volutpat fermentum purus. Aliquam efficitur velit id metus mollis, vel
+        ultricies ante malesuada.
+      </p>
     </main>
 
     <footer class="site-footer">
-      <p>Felicia Angeline · Universitas Tarumanagara · 2026</p>
+      <p>© 2026 Portfolio. All rights reserved.</p>
     </footer>
   </body>
 </html>

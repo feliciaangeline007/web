@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Felicia Angeline | Profile</title>
+    <title>Welcome | Home</title>
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Urbanist:wght@300;400;600;700&display=swap');
 
@@ -112,16 +112,16 @@ body {
   z-index: 1;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 56px 24px 88px;
+  padding: 48px 24px 80px;
   display: flex;
   flex-direction: column;
-  gap: 56px;
+  gap: 48px;
 }
 
 .hero {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 36px;
+  gap: 32px;
   align-items: center;
 }
 
@@ -148,23 +148,6 @@ body {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 24px;
-}
-
-.hero-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 22px;
-}
-
-.hero-badge {
-  padding: 8px 14px;
-  border-radius: 999px;
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: rgba(196, 90, 63, 0.12);
-  color: var(--accent-dark);
 }
 
 .cta-row {
@@ -207,8 +190,6 @@ body {
 .btn-ghost:hover {
   transform: translateY(-2px);
 }
-
-
 
 .grid {
   display: grid;
@@ -260,105 +241,6 @@ body {
   font-size: 14px;
 }
 
-.timeline {
-  background: var(--panel);
-  border-radius: 28px;
-  padding: 28px;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(138, 61, 45, 0.1);
-}
-
-.timeline h3 {
-  margin-bottom: 20px;
-}
-
-.timeline-items {
-  display: grid;
-  gap: 16px;
-}
-
-.timeline-item {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 16px;
-  align-items: start;
-}
-
-.timeline-year {
-  font-weight: 700;
-  color: var(--accent-dark);
-}
-
-.timeline-item h4 {
-  margin-bottom: 6px;
-}
-
-.timeline-item p {
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-.contact {
-  background: #2b2a27;
-  color: white;
-  border-radius: 28px;
-  padding: 28px;
-  box-shadow: var(--shadow);
-}
-
-.quick-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-}
-
-.quick-card {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(196, 90, 63, 0.1);
-}
-
-.quick-card h4 {
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-.quick-card p {
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-.contact h3 {
-  margin-bottom: 12px;
-}
-
-.contact p {
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 20px;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 16px;
-}
-
-.contact-label {
-  display: block;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-bottom: 6px;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.contact-page {
-  display: grid;
-  gap: 24px;
-}
-
 .site-footer {
   max-width: 1100px;
   margin: 0 auto 32px;
@@ -382,12 +264,7 @@ body {
   .page {
     padding: 32px 18px 64px;
   }
-
-  .timeline-item {
-    grid-template-columns: 1fr;
-  }
 }
-
     </style>
   </head>
   <body>
@@ -399,112 +276,24 @@ body {
       <nav class="nav">
         <a href="/" class="nav-link">Home</a>
         <a href="/about" class="nav-link">About</a>
+        <a href="/profile" class="nav-link">Profile</a>
       </nav>
-      <div class="nav-cta">Profile Page</div>
     </header>
 
     <main class="page">
-      <section class="hero">
-        <div class="hero-text">
-          <p class="tag">Profile Mahasiswi</p>
-          <h1>Felicia Angeline</h1>
-          <p class="subtitle">
-            Mahasiswi Universitas Tarumanagara yang fokus pada pengembangan diri, kreativitas,
-            dan kolaborasi.
-          </p>
-          <div class="hero-badges">
-            <span class="hero-badge">Semester 2</span>
-            <span class="hero-badge">Teknologi Informasi</span>
-            <span class="hero-badge">Target lulus 2029</span>
-          </div>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="/about">Lihat Portofolio</a>
-          </div>
-        </div>
-
-      </section>
-
-      <section class="quick-grid">
-        <article class="quick-card">
-          <h4>Bidang Favorit</h4>
-          <p>UI/UX, desain poster, dan konten digital yang storytelling‑friendly.</p>
-        </article>
-        <article class="quick-card">
-          <h4>Goal 2026</h4>
-          <p>Membangun portofolio yang konsisten dan aktif di organisasi kampus.</p>
-        </article>
-        <article class="quick-card">
-          <h4>Kolaborasi</h4>
-          <p>Terbuka untuk proyek kreatif, event kampus, dan komunitas mahasiswa.</p>
-        </article>
-      </section>
-
-      <section class="grid">
-        <article class="panel">
-          <h3>Tentang Felicia</h3>
-          <p>
-            Felicia dikenal ramah, tekun, dan senang mengeksplorasi hal baru. Saat ini ia
-            aktif membangun pengalaman akademik melalui organisasi kampus dan proyek kreatif.
-          </p>
-        </article>
-        <article class="panel">
-          <h3>Pendidikan</h3>
-          <ul class="list">
-            <li>S1 Universitas Tarumanagara</li>
-            <li>Fokus: Teknologi Informasi (IT)</li>
-            <li>Target lulus: 2029</li>
-          </ul>
-        </article>
-        <article class="panel">
-          <h3>Aktivitas Favorit</h3>
-          <ul class="chips">
-            <li>Desain Poster</li>
-            <li>Fotografi</li>
-            <li>Public Speaking</li>
-            <li>Event Kampus</li>
-          </ul>
-        </article>
-      </section>
-
-      <section class="timeline">
-        <h3>Highlights</h3>
-        <div class="timeline-items">
-          <div class="timeline-item">
-            <span class="timeline-year">2025</span>
-            <div>
-              <h4>Awal Studi</h4>
-              <p>Memulai perjalanan kuliah di Universitas Tarumanagara.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact">
-        <h3>Kontak</h3>
-        <p>Ingin berkolaborasi? Mari terhubung dan buat sesuatu yang berkesan.</p>
-        <div class="contact-grid">
-          <div>
-            <span class="contact-label">Email</span>
-            <p>felicia.angeline@email.com</p>
-          </div>
-          <div>
-            <span class="contact-label">Instagram</span>
-            <p>@felicia.angeline</p>
-          </div>
-          <div>
-            <span class="contact-label">LinkedIn</span>
-            <p>felicia-angeline</p>
-          </div>
-          <div>
-            <span class="contact-label">GitHub</span>
-            <p>github.com/felicia-angeline</p>
-          </div>
-        </div>
-      </section>
+      <h1>Welcome</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+        in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
     </main>
 
     <footer class="site-footer">
-      <p>Felicia Angeline · Universitas Tarumanagara · 2026</p>
+      <p>© 2026 Portfolio. All rights reserved.</p>
     </footer>
   </body>
 </html>
