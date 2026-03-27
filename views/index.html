@@ -112,16 +112,16 @@ body {
   z-index: 1;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 48px 24px 80px;
+  padding: 56px 24px 88px;
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 56px;
 }
 
 .hero {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
+  gap: 36px;
   align-items: center;
 }
 
@@ -148,6 +148,23 @@ body {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 24px;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.hero-badge {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(196, 90, 63, 0.12);
+  color: var(--accent-dark);
 }
 
 .cta-row {
@@ -191,54 +208,7 @@ body {
   transform: translateY(-2px);
 }
 
-.hero-card {
-  background: var(--panel);
-  border-radius: 28px;
-  padding: 28px;
-  box-shadow: var(--shadow);
-  display: grid;
-  gap: 20px;
-}
 
-.avatar {
-  width: 96px;
-  height: 96px;
-  border-radius: 28px;
-  background: linear-gradient(135deg, #c45a3f, #efb59f);
-  display: grid;
-  place-items: center;
-  color: white;
-  font-weight: 700;
-  font-size: 28px;
-  font-family: 'Playfair Display', serif;
-}
-
-.hero-card h2 {
-  font-size: 24px;
-}
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-  gap: 12px;
-}
-
-.stat {
-  background: #f8f2ea;
-  border-radius: 16px;
-  padding: 12px;
-}
-
-.stat-label {
-  display: block;
-  font-size: 12px;
-  color: var(--muted);
-  margin-bottom: 6px;
-}
-
-.stat-value {
-  font-size: 18px;
-}
 
 .grid {
   display: grid;
@@ -251,6 +221,12 @@ body {
   border-radius: 24px;
   padding: 24px;
   box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px rgba(36, 24, 12, 0.16);
 }
 
 .panel h3 {
@@ -289,6 +265,7 @@ body {
   border-radius: 28px;
   padding: 28px;
   box-shadow: var(--shadow);
+  border: 1px solid rgba(138, 61, 45, 0.1);
 }
 
 .timeline h3 {
@@ -327,6 +304,30 @@ body {
   border-radius: 28px;
   padding: 28px;
   box-shadow: var(--shadow);
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.quick-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(196, 90, 63, 0.1);
+}
+
+.quick-card h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.quick-card p {
+  color: var(--muted);
+  line-height: 1.5;
 }
 
 .contact h3 {
@@ -411,37 +412,31 @@ body {
             Mahasiswi Universitas Tarumanagara yang fokus pada pengembangan diri, kreativitas,
             dan kolaborasi.
           </p>
+          <div class="hero-badges">
+            <span class="hero-badge">Semester 2</span>
+            <span class="hero-badge">Teknologi Informasi</span>
+            <span class="hero-badge">Target lulus 2029</span>
+          </div>
           <div class="cta-row">
             <a class="btn btn-primary" href="/about">Lihat Portofolio</a>
           </div>
         </div>
-        <div class="hero-card">
-          <div class="avatar">
-            <span>FA</span>
-          </div>
-          <div class="hero-card-body">
-            <h2>Felicia Angeline</h2>
-            <p>Universitas Tarumanagara</p>
-            <div class="stats">
-              <div class="stat">
-                <span class="stat-label">Semester</span>
-                <strong class="stat-value">4</strong>
-              </div>
-              <div class="stat">
-                <span class="stat-label">NIM</span>
-                <strong class="stat-value">535250029</strong>
-              </div>
-              <div class="stat">
-                <span class="stat-label">Jurusan</span>
-                <strong class="stat-value">IT</strong>
-              </div>
-              <div class="stat">
-                <span class="stat-label">Target Lulus</span>
-                <strong class="stat-value">2029</strong>
-              </div>
-            </div>
-          </div>
-        </div>
+
+      </section>
+
+      <section class="quick-grid">
+        <article class="quick-card">
+          <h4>Bidang Favorit</h4>
+          <p>UI/UX, desain poster, dan konten digital yang storytelling‑friendly.</p>
+        </article>
+        <article class="quick-card">
+          <h4>Goal 2026</h4>
+          <p>Membangun portofolio yang konsisten dan aktif di organisasi kampus.</p>
+        </article>
+        <article class="quick-card">
+          <h4>Kolaborasi</h4>
+          <p>Terbuka untuk proyek kreatif, event kampus, dan komunitas mahasiswa.</p>
+        </article>
       </section>
 
       <section class="grid">
@@ -477,22 +472,8 @@ body {
           <div class="timeline-item">
             <span class="timeline-year">2025</span>
             <div>
-              <h4>Project Visual Branding</h4>
-              <p>Mengembangkan konsep visual untuk event kampus tahunan.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">2024</span>
-            <div>
-              <h4>Volunteer Media</h4>
-              <p>Mengelola konten digital untuk komunitas mahasiswa.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">2023</span>
-            <div>
               <h4>Awal Studi</h4>
-              <p>Memulai perjalanan akademik di Universitas Tarumanagara.</p>
+              <p>Memulai perjalanan kuliah di Universitas Tarumanagara.</p>
             </div>
           </div>
         </div>
@@ -513,6 +494,10 @@ body {
           <div>
             <span class="contact-label">LinkedIn</span>
             <p>felicia-angeline</p>
+          </div>
+          <div>
+            <span class="contact-label">GitHub</span>
+            <p>github.com/felicia-angeline</p>
           </div>
         </div>
       </section>
